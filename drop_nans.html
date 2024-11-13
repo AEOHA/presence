@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How-To Guide: Handling Missing Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        code {
+            background-color: #f9f9f9;
+            border: 1px solid #e1e1e1;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>How-To Guide: Handling Missing Data</h1>
+    <h3>1.1 Handling Missing Data</h3>
+    <ul>
+        <li>
+            <strong>i. Function to drop rows/columns with missing values</strong>
+            <p>Here is an example function to drop rows or columns with missing values. You can find the code <a href="https://raw.githubusercontent.com/AEOHA/presence/main/CodeFiles/drop_missing_values.py" target="_blank">here</a>.</p>
+        </li>
+    </ul>
+
+    <h3>Sample Data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>28</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td></td>
+                <td>jane@example.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Emily Jones</td>
+                <td>34</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Code Snippet</h3>
+    <code>
+        def drop_missing_values(df, axis=0):
+            """
+            Drops rows or columns with missing values.
+            
+            :param df: DataFrame
+            :param axis: 0 for rows, 1 for columns
+            :return: DataFrame with missing values dropped
+            """
+            return df.dropna(axis=axis)
+    </code>
+
+    <p>To use this function, make sure to check out the full code <a href="https://raw.githubusercontent.com/AEOHA/presence/main/CodeFiles/drop_missing_values.py" target="_blank">here</a>.</p>
+</body>
+</html>
