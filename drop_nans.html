@@ -41,7 +41,10 @@
         </li>
     </ul>
 
-    <h3>Sample Data</h3>
+    <h3>Step-by-Step Guide</h3>
+    <ol>
+        <li><strong>Understand the Sample Data:</strong> Before handling missing data, review your dataset. Here’s an example:</li>
+    </ol>
     <table>
         <thead>
             <tr>
@@ -72,6 +75,9 @@
             </tr>
         </tbody>
     </table>
+    <ol start="2">
+        <li><strong>Write the Function:</strong> Create a Python function to drop rows or columns with missing values.</li>
+    </ol>
 
     <h3>Code Snippet</h3>
     <code>
@@ -87,5 +93,30 @@
     </code>
 
     <p>To use this function, make sure to check out the full code <a href="https://raw.githubusercontent.com/AEOHA/presence/main/CodeFiles/drop_missing_values.py" target="_blank">here</a>.</p>
+
+    <ol start="3">
+        <li><strong>Implement and Test:</strong> Apply the function to your data to ensure it works correctly.</li>
+    </ol>
+    <p>Example usage:</p>
+    <code>
+        import pandas as pd
+
+        # Sample DataFrame
+        data = {
+            'ID': [1, 2, 3],
+            'Name': ['John Doe', 'Jane Smith', 'Emily Jones'],
+            'Age': [28, None, 34],
+            'Email': ['john@example.com', 'jane@example.com', None]
+        }
+        df = pd.DataFrame(data)
+
+        # Drop rows with missing values
+        cleaned_df = drop_missing_values(df)
+
+        print(cleaned_df)
+    </code>
+
+    <p>By following these steps, you can effectively handle missing data in your datasets. Happy coding!</p>
 </body>
 </html>
+
